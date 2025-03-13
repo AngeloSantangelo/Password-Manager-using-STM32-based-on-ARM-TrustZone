@@ -6,6 +6,9 @@
 ## Obiettivo e Descrizione
 **SafePassSTM** è un Password Manager Sicuro che usa una scheda STM32 basata su **ARM TrustZone** con la funzione di server USB. La scheda riceve le password dagli utenti tramite un'interfaccia web e le memorizza nella memoria sicura (**Secure Word**).
 
+## Architettura di SafePassSTM
+
+
 ## Descrizione delle Cartelle
 - La cartella "front-end" contiene tutti i file riguardanti Typescript e l'interfaccia grafica con Angular, compresa la connessione con la scheda STM32 per l'invio delle password.
 - La cartella "iot-security" contiene il progetto sviluppato in STM32CubeIDE. 
