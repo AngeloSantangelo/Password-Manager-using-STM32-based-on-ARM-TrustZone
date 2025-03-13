@@ -25,9 +25,9 @@ SafePassSTM è un Password Manager Sicuro che usa una scheda STM32 basata su ARM
 6. Collegare la Scheda al PC via USB (cavo USB-TypeC).
 7. Clonare la cartella "front-end", utilizzando un qualsiasi IDE (i.e. [Visual Studio Code](https://code.visualstudio.com/download).
 8. Avviare il server da Command-Line
-   ```bash
+   ```
 
-ng serve
+    ng serve
 
-```
+    ```
 9. Vai su [http://localhost:4200/](http://localhost:4200/)
