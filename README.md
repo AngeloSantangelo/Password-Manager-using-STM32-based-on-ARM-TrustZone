@@ -12,7 +12,7 @@
 
 ## Requisiti
 - **Hardware**: [Scheda STM32 Nucleo-64](https://www.st.com/en/evaluation-tools/NUCLEO-WBA55CG.html)
-- **IDE**: [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) (Last Version) e [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) (to generate code) 
+- **IDE**: [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) (Last Version) e [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) (per generare il codice) 
 - **Framework Web**: [ANGULAR](https://angular.dev/installation)
 - **Backend**: [TypeScript](https://www.npmjs.com/package/typescript)
 
