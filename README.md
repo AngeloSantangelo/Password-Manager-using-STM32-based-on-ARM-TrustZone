@@ -18,6 +18,7 @@
 - **IDE**: [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) (Last Version) e [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) (per generare il codice) 
 - **Framework Web**: [ANGULAR](https://angular.dev/installation)
 - **Backend**: [TypeScript](https://www.npmjs.com/package/typescript)
+- **Serial Monitor**: [PuTTy](https://putty.it.softonic.com/) (per visualizzare ciò che viene inviato tramite UART Communication)
 
 ## Configurazione di STM32
 1. Aprire **STM32CubeIDE**.
