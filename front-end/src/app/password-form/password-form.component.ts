@@ -31,6 +31,7 @@ export class PasswordFormComponent {
 
 
 
+
   async connectSerial() {
     try {
       // Se la porta è già connessa, chiudila prima di riaprire
@@ -48,7 +49,12 @@ export class PasswordFormComponent {
       }
   
       // Apri la porta seriale con il baud rate corretto
-      await this.port.open({ baudRate: 115200 });
+      await this.port.open({ 
+        baudRate: 115200,
+        dataBits: 8,
+        stopBits: 1,
+        parity: 'none'
+      });
   
       // Ottieni il writer direttamente dalla porta
       this.writer = this.port.writable.getWriter();
@@ -75,18 +81,18 @@ export class PasswordFormComponent {
     try {
       // Codifica la password in formato Uint8Array
       const encoder = new TextEncoder();
-      const data = encoder.encode(this.password + '\n'); // Aggiungi un newline per STM32
+      const data = encoder.encode(this.password); // Aggiungi un newline per STM32
   
       // Invia la password via seriale
       await this.writer.write(data);
-      console.log('Password inviata:', data);
+      console.log('Password inviata:', Array.from(data));
+
+      // Reset campo password
+      this.password = ''; 
     } catch (err) {
       console.error('Errore durante l’invio della password:', err);
     }
   }
-  
-  
-
 }
 
 
