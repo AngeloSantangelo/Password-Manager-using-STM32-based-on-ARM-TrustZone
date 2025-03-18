@@ -81,11 +81,11 @@ export class PasswordFormComponent {
     try {
       // Codifica la password in formato Uint8Array
       const encoder = new TextEncoder();
-      const data = encoder.encode(this.password); // Aggiungi un newline per STM32
+      const data = encoder.encode(this.password + "\n"); // Aggiungi un newline per STM32
   
       // Invia la password via seriale
       await this.writer.write(data);
-      console.log('Password inviata:', Array.from(data));
+      console.log('Password inviata:', this.password);
 
       // Reset campo password
       this.password = ''; 
