@@ -56,8 +56,10 @@ export class PasswordFormComponent {
         parity: 'none'
       });
   
-      // Ottieni il writer direttamente dalla porta
-      this.writer = this.port.writable.getWriter();
+      // Ottieni il writer
+      const textEncoder = new TextEncoderStream();
+      this.writer = textEncoder.writable.getWriter();
+      textEncoder.readable.pipeTo(this.port.writable);
   
       console.log('Connessione Serial Aperta!');
   
@@ -94,9 +96,3 @@ export class PasswordFormComponent {
     }
   }
 }
-
-
-
-
-
-
